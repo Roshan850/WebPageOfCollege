@@ -5,25 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>R.D. Engineering College – CSE Department</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f9; color: #333; }
-    header { background: #3aa4a6; color: white; padding: 20px; text-align: center; }
-    nav { background: #00509e; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 30px; max-width: 1000px; margin: auto; }
-    h2 { color: #003366; }
-    .department { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;
-                  box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background: #003366; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #003366, #0066cc);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Navigation */
+    nav {
+      background: #00509e;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 4px;
+    }
+    nav a:hover {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+    }
+
+    /* Sections */
+    section {
+      padding: 50px 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #003366;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #ffcc00;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Department Cards */
+    .department {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .department:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .department h3 {
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+
+    /* Faculty List */
+    ul {
+      list-style-type: square;
+      padding-left: 25px;
+    }
+    ul li {
+      margin: 6px 0;
+      font-size: 1rem;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #003366, #0066cc);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Highlight Box */
+    .highlight {
+      background: #eaf2ff;
+      border-left: 6px solid #0066cc;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>R.D. Engineering College, Ghaziabad</h1>
     <p>Excellence in Technical Education and Innovation</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#departments">Departments</a>
@@ -31,31 +149,48 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- About Section -->
   <section id="about">
     <h2>About RDEC</h2>
-    <p>
-      R.D. Engineering College (RDEC), established in 2006 by the Rameshwar Dayal Educational Trust, is
-      situated on Delhi–Meerut Road, Duhai, Ghaziabad. Affiliated to AKTU and approved by AICTE, RDEC
-      offers a dynamic and industry-aligned learning environment with modern infrastructure and strong
-      placement support.
-    </p>
+    <div class="highlight">
+      <p>
+        Established in 2006, <b>R.D. Engineering College (RDEC)</b> is affiliated with 
+        <b>AKTU</b> and approved by <b>AICTE</b>. Located on NH-58, Duhai, Ghaziabad, 
+        RDEC is committed to delivering quality education and preparing students for 
+        successful careers in engineering and technology.
+      </p>
+    </div>
   </section>
 
+  <!-- Departments -->
   <section id="departments">
     <h2>Departments</h2>
     <div class="department">
       <h3>Computer Science & Engineering (CSE)</h3>
-      <p>B.Tech (120 seats), M.Tech (18 seats) – established in 2006 with innovative pedagogy and strong industry links.</p>
+      <p>Focuses on modern computing, AI, cybersecurity, and software engineering.</p>
     </div>
-    <!-- Add other departments similarly if needed -->
+    <div class="department">
+      <h3>Electronics & Communication Engineering (ECE)</h3>
+      <p>Specializes in VLSI, communication, and embedded systems.</p>
+    </div>
+    <div class="department">
+      <h3>Mechanical Engineering (ME)</h3>
+      <p>Expertise in thermodynamics, robotics, and manufacturing processes.</p>
+    </div>
+    <div class="department">
+      <h3>Civil Engineering (CE)</h3>
+      <p>Strength in construction, structural engineering, and sustainability.</p>
+    </div>
   </section>
 
+  <!-- CSE Department -->
   <section id="cse">
-    <h2>Computer Science & Engineering Department</h2>
-    <p>The CSE Department offers cutting-edge education supported by modern labs, ITCRC, industrial training, and soft-skill enhancement programs.</p>
+    <h2>Computer Science & Engineering</h2>
+    <p>The <b>CSE Department</b> offers top-notch education with modern labs, ITCRC, 
+    and strong industry collaborations. Training includes cutting-edge domains like AI, ML, IoT, and Big Data.</p>
 
     <h3>Head of Department</h3>
-    <p><strong>Mr. Lav Kumar Dixit</strong> – HOD & Associate Professor (Python & Data Science specialist)</p>
+    <p><b>Mr. Lav Kumar Dixit</b> – Associate Professor & HOD (Python & Data Science specialist)</p>
 
     <h3>Faculty Members</h3>
     <ul>
@@ -92,6 +227,7 @@
     </ul>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p><b>Address:</b> 9th KM Stone on NH-58, Delhi–Meerut Road, Duhai, Ghaziabad, Uttar Pradesh 201206</p>
@@ -99,6 +235,7 @@
     <p><b>Phone:</b> +91-8588899706</p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 R.D. Engineering College. All rights reserved.</p>
   </footer>
